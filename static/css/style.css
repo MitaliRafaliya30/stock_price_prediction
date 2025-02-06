@@ -1,0 +1,387 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a192f;
+    color: white;
+    padding-top: 70px; /* Prevents content from being hidden under navbar */
+}
+
+/* Sticky Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Shrinks Navbar on Scroll */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Menu Styling */
+.navbar-nav {
+    font-size: 18px;
+}
+
+/* Proper spacing between navbar items */
+.navbar-nav .nav-item {
+    padding: 0 15px;
+}
+
+/* Hover effect on menu items */
+.navbar-nav .nav-link {
+    padding: 10px;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Hover effect: slight scale-up */
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+    transform: scale(1.1);
+}
+
+/* Active Link Highlight */
+.navbar-nav .nav-link.active {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/bk2.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 22px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Hover Effect */
+.hero .btn-warning {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 24px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hero .btn-warning:hover {
+    background: #ffcc00;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 35px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* Adjust navbar padding for mobile */
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 5px 0;
+    }
+}
+
+/* Full-Screen Registration Page Layout */
+.register-container {
+    display: flex;
+    height: 100vh; /* Full screen without scrolling */
+    overflow: hidden;
+}
+
+/* Left Section with Bitcoin Background */
+.left-section {
+    flex: 1;
+    background: url('../images/p1.avif') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay Text on Left Section */
+.overlay-text {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Right Section - Form */
+.right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/l1.jpg') no-repeat center center/cover;
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 350px; /* Adjusted width */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Form Input Styling */
+.form-control {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 8px; /* Reduced padding */
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid #ffc107;
+    box-shadow: none;
+}
+
+/* Placeholder Text */
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-light {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-light:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .register-container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        height: 200px;
+        flex: none;
+    }
+
+    .overlay-text {
+        font-size: 18px;
+    }
+
+    .right-section {
+        padding: 15px;
+    }
+
+    .form-container {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+/* Floating Login Button */
+.floating-login-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+.floating-login-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Icon Styling */
+.floating-login-btn i {
+    font-size: 18px;
+}
+
+/* Ensure Full-Screen Without Scroll */
+.register-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Adjust Form Width */
+.form-container {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Full-Screen Login Page Layout */
+.login-container {
+    display: flex;
+    height: 100vh; /* Full screen without scrolling */
+    overflow: hidden;
+}
+
+/* Left Section with Bitcoin Background */
+.left-section {
+    flex: 1.2;
+    background: url('../images/p1.avif') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay Text on Left Section */
+.overlay-text {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Right Section - Form */
+.right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/l1.jpg') no-repeat center center/cover;
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Form Input Styling */
+.form-control {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid #ffc107;
+    box-shadow: none;
+}
+
+/* Remember Me Checkbox */
+.form-check-input {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-light {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-light:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        height: 200px;
+        flex: none;
+    }
+
+    .overlay-text {
+        font-size: 18px;
+    }
+
+    .right-section {
+        padding: 15px;
+    }
+
+    .form-container {
+        width: 90%;
+        max-width: 320px;
+    }
+}

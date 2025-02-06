@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+
+    <!-- Login Section -->
+    <div class="login-container">
+        <!-- Left Side -->
+        <div class="left-section">
+            <div class="overlay-text">
+            </div>
+        </div>
+
+        <!-- Right Side (Form) -->
+        <div class="right-section">
+            <div class="form-container">
+                <h2 class="text-center text-light">LOG IN</h2>
+                <p class="text-center text-light">Please Enter Your Log In Credentials</p>
+                <form id="loginForm" onsubmit="return handleLogin(event)">
+                    <div class="mb-2">
+                        <label class="form-label text-light">USERNAME OR E-MAIL</label>
+                        <input type="email" class="form-control" id="login_email" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label text-light">PASSWORD</label>
+                        <input type="password" class="form-control" id="login_password" required>
+                    </div>
+                    <div class="mb-2 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label text-light" for="rememberMe">KEEP ME SIGNED IN</label>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary flex-fill">Login</button>
+                        <a href="{{ url_for('register') }}" class="btn btn-light flex-fill">Register</a>
+                    </div>
+                    <!-- <p class="text-center mt-3">
+                        <a href="#" class="forgot-password">FORGOT YOUR PASSWORD?</a> -->
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/validation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+
+</body>
+</html>

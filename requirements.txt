@@ -1,0 +1,9 @@
+flask
+pandas
+numpy
+seaborn
+scikit-learn
+dill
+flask-login
+pymongo
+#-e .
